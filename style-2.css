@@ -88,6 +88,17 @@ header p {
   margin: 0;
 }
 
+li {
+  color: #aaa;
+  font-style: italic;
+  font-size: var(--header-p-size);
+  margin: 0;
+}
+
+footer {
+  color: #b5acac;
+}
+
 .main-wrapper main {
   display: flex;
   flex-direction: column;

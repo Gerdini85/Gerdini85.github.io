@@ -23,6 +23,12 @@ p{
   padding: 2px 8px;
 }
 
+li{
+  background: darkgreen;
+  border-radius: 12px;
+  padding: 2px 8px;
+}
+
 h1{
   background: #33ff5f;
   border-radius: 12px;
