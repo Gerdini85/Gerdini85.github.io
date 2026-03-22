@@ -1,3 +1,97 @@
+html,
 body {
-  background-color: #dfecff;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
 }
+
+body {
+  font-family: "Comic Sans MS", "Poppins", cursive;
+  color: #000000;
+  background-image: url("style-1/GIU AMA 005-08.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: 20%;
+  margin-right: 20%;
+  position: relative;
+}
+
+p{
+  background: darkgreen;
+  border-radius: 12px;
+  padding: 2px 8px;
+}
+
+h1{
+  background: #33ff5f;
+  border-radius: 12px;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+h2 {
+  margin-top: 4%;
+  text-transform: uppercase;
+  background: #ff5fae;
+  border-radius: 12px;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+h3{
+  background: #fff77a;
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+
+/*Zdjęcia boczne*/
+html::before,
+html::after,
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 14vw;
+  max-width: 220px;
+  min-width: 60px;
+  height: 34vh;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+}
+
+/* lewa kolumna */
+html::before {
+  left: 2%;
+  top: 8vh;
+  background-image: url("style-1/miezekieze-cat-9643209_1920.jpg");
+}
+
+html::after {
+  left: 2%;
+  bottom: 8vh;
+  background-image: url("style-1/quangpraha-cat-3266673_1920.jpg");
+}
+
+/* prawa kolumna */
+body::before {
+  right: 2%;
+  top: 8vh;
+  background-image: url("style-1/noly-cats-1209743_1920.jpg");
+}
+
+body::after {
+  right: 2%;
+  bottom: 8vh;
+  background-image: url("style-1/ruslansikunov-cat-8361048_1920.jpg");
+}
+
+
+
+
+
+
