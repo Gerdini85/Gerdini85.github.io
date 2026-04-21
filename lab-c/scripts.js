@@ -50,7 +50,7 @@ document.getElementById("saveButton").addEventListener("click", function () {
     rasterContext.clearRect(0, 0, rasterMap.width, rasterMap.height);
     rasterContext.drawImage(canvas, 0, 0, rasterMap.width, rasterMap.height);
 
-    const size = 2;
+    const size = 4;
     buildPuzzle(rasterMap, size);
     createDropSlots( size);
 
@@ -59,11 +59,6 @@ document.getElementById("saveButton").addEventListener("click", function () {
 
 });
 
-// function clearCanvas() {
-//   const rasterMap = document.getElementById("rasterMap");
-//   const ctx = rasterMap.getContext("2d");
-//   ctx.clearRect(0, 0, rasterMap.width, rasterMap.height);
-// }
 function attachDragHandlersToItem(item) {
   item.addEventListener("dragstart", function (event) {
     this.style.border = "2px dashed #D8D8FF";
@@ -231,44 +226,3 @@ function checkWin() {
     setTimeout( alert_win, 50);
   }
 }
-
-
-
-
-
-// function buildPuzzle(sourceCanvas, rows, cols) {
-//   const container = document.getElementById("dragstart")
-//   container.innerHTML = ""; // Clear previous puzzle pieces
-//
-//   const pieceWidth = sourceCanvas.width / cols;
-//   const pieceHeight = sourceCanvas.height / rows;
-//
-//   for (let row = 0; row < rows; row++) {
-//     for (let col = 0; col < cols; col++) {
-//       const pieceCanvas = document.createElement("canvas");
-//       pieceCanvas.width = pieceWidth;
-//       pieceCanvas.height = pieceHeight;
-//       const ctx = pieceCanvas.getContext("2d");
-//
-//       ctx.drawImage(
-//         sourceCanvas,
-//         col * pieceWidth,
-//         row * pieceHeight,
-//         pieceWidth,
-//         pieceHeight,
-//         0,
-//         0,
-//         pieceWidth,
-//         pieceHeight
-//       );
-//
-//       const img = new Image();
-//       img.src = pieceCanvas.toDataURL();
-//       img.id = `piece-${row}-${col}`;
-//       img.draggable = true;
-//       attachDragHandlersToItem(img);
-//       container.appendChild(img);
-//     }
-//   }
-// }
-
