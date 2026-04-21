@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pl" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gerard Fiał (57701) - PTW LAB C</title>
+
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="scripts.js" defer></script>
+
+    <link rel="stylesheet" href="leaflet-1.9.4/leaflet.css" />
+    <script src="leaflet-1.9.4/leaflet-src.js"></script>
+    <script src="leaflet-1.9.4/leaflet-providers.js"></script>
+    <script src="leaflet-1.9.4/leaflet-image.js"></script>
+</head>
+<body>
+
+    <h1>Gerard Fiał (57701) - PTW LAB C</h1>
+
+    <button id="getLocation">Get Current Location</button>
+    <button id="saveButton">Save Raster Map</button>
+
+    <div id="positionInfo">
+        <strong>Latitude:</strong> <span id="latitude"></span><br>
+        <strong>Longitude:</strong> <span id="longitude"></span><br>
+    </div>
+
+
+
+    <div class="map" id="map"></div>
+
+    <div id="rasterMap_txt"> <strong>Zdjęcie jak ma wyglądać</strong></div>
+    <canvas id="rasterMap" height="275" width = "450"></canvas><!-- korzystać z leaflet -->
+
+    <div id="resorting-place_txt"><strong>Miejsce na klocki</strong></div>
+    <div id="dragstart" class="drag-taeget"></div>
+
+    <div id="drag-target_txt"> <strong>Tutaj ułuż klocki</strong></div>
+    <div id="dragend" class="drag-target"></div>
+
+</body>
+</html>

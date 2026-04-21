@@ -1,0 +1,150 @@
+html,
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Times New Roman", serif;
+  color: #000000;
+  background-image: url("style-2/back-ground.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: 30%;
+  margin-right: 7%;
+  position: relative;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 25%;
+  height: 100vh;
+  z-index: 2;
+  overflow: hidden;
+  padding: 40px 24px 40px 18px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  border-right: 4px solid #ff4fa3;
+}
+
+header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  flex: 1;
+  margin-top: 16px;
+  min-height: 420px;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  --gap: 10px;
+  --row: calc((100% - (3 * var(--gap))) / 4);
+
+  background-image:
+    url("style-2/IMG_7165.jpg"),
+    url("style-2/IMG_7914.jpg"),
+    url("style-2/IMG_8294.jpg"),
+    url("style-2/IMG_8407.jpg");
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size:
+    auto var(--row),
+    auto var(--row),
+    auto var(--row),
+    auto var(--row);
+  background-position:
+    50% 0,
+    50% calc(var(--row) + var(--gap)),
+    50% calc((2 * var(--row)) + (2 * var(--gap))),
+    50% calc((3 * var(--row)) + (3 * var(--gap)));
+}
+
+:root {
+  --header-h1-size: 2.2rem;
+  --header-p-size: 0.9rem;
+}
+
+header h1 {
+  color: #e60000;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: -6px;
+  margin-right: 10px;
+  font-size: var(--header-h1-size);
+  line-height: 1.2;
+}
+
+header p {
+  color: #aaa;
+  font-style: italic;
+  font-size: var(--header-p-size);
+  margin: 0;
+}
+
+li {
+  color: #aaa;
+  font-style: italic;
+  font-size: var(--header-p-size);
+  margin: 0;
+}
+
+footer {
+  color: #b5acac;
+}
+
+.main-wrapper main {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.main-wrapper main section {
+  background: rgba(22, 22, 28, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 22px 24px;
+}
+
+.main-wrapper main section h2 {
+  color: #6f7780;
+  margin: 0 0 16px 0;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.main-wrapper main section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #ff4fa3;
+  border-radius: 2px;
+}
+
+.main-wrapper main section h3 {
+  color: #c9ced4;
+  margin: 14px 0 8px;
+}
+
+.main-wrapper main section p {
+  color: #ffffff;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  :root {
+    --header-h1-size: 0.9rem;
+    --header-p-size: 0.75rem;
+  }
+}
+

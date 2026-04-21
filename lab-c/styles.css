@@ -1,0 +1,102 @@
+body {
+  background-color: #e6f1fc;
+}
+
+.item {
+  border: 1px solid #999;
+  box-sizing: border-box;
+}
+
+
+#getLocation{
+  margin-left: 15%;
+}
+
+#positionInfo{
+  margin-left: 15%
+}
+
+#rasterMap_txt {
+  float: right;
+  width: 450px;
+  margin-right: 15%;
+  text-align: center;
+  clear: right;
+}
+
+#resorting-place_txt {
+  float: left;
+  width: 450px;
+  margin-left: 15%;
+  margin-top: 20px;
+  text-align: center;
+  clear: left;
+}
+
+#drag-target_txt {
+  float: right;
+  width: 450px;
+  margin-right: 15%;
+  text-align: center;
+  clear: right;
+}
+
+.map {
+  height: 275px;
+  width: 450px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  margin-left: 15%;
+  float: left;
+}
+
+#rasterMap {
+  display: block;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  margin-right: 15%;
+  float: right;
+}
+
+#dragstart {
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  height: 275px;
+  width: 450px;
+  margin-left: 15%;
+  float: left;
+  clear: left;
+  display: grid;
+  gap: 0;
+  padding: 0;
+  align-content: start;
+}
+
+
+.item {
+  margin: 0 !important;
+  border: 0;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+
+#dragend {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 450px;
+  height: 275px;
+  margin-top: 20px;
+  margin-right: 15%;
+  float: right;
+  clear: right;
+  gap: 0;
+  border: 1px solid #ccc;
+}
+
+.drop-slot {
+  border: 1px dashed #7f7fe9;
+  box-sizing: border-box;
+}
+
