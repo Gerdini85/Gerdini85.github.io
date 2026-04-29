@@ -111,3 +111,15 @@ h2 {
   .forecast-container-box { flex-direction: column; }
   .forecast-item:not(:last-child) { border-right: none; border-bottom: 1px solid var(--separator); }
 }
+
+.placeholder, .placeholder-box{
+  opacity: 0.5;
+  filter: grayscale(1);
+  border-style: dashed !important;
+}
+
+.loading-text {
+  font-style: italic;
+  color: #666;
+  margin-top: 10px;
+}

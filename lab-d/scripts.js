@@ -14,8 +14,8 @@ function getWeatherData(city) {
     return;
   }
 
-  currentWeatherData.innerHTML = '<div class="loading">Ładowanie danych pogodowych...</div>';
-  forecastData.innerHTML = '<div class="loading">Ładowanie prognozy pogody...</div>';
+  currentWeatherData.innerHTML = '<div class="current-card"><p class="loading-text">Ładowanie danych...</p></div>';
+  forecastData.innerHTML = '<div class="forecast-container-box"><p class="loading-text" style="width:100%">Pobieranie prognozy...</p></div>';
 
   getCurrentWeather(city);
 
