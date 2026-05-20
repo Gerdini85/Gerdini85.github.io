@@ -8,6 +8,7 @@ $router = new \App\Service\Router();
 
 $action = $_REQUEST['action'] ?? null;
 switch ($action) {
+    // Posts
     case 'post-index':
     case null:
         $controller = new \App\Controller\PostController();
@@ -38,10 +39,38 @@ switch ($action) {
         $controller = new \App\Controller\PostController();
         $view = $controller->deleteAction($_REQUEST['id'], $router);
         break;
+
+    // Books
+    case 'book-index':
+        $controller = new \App\Controller\BookController();
+        $view = $controller->indexAction($templating, $router);
+        break;
+    case 'book-show':
+        if (! $_REQUEST['id']) break;
+        $controller = new \App\Controller\BookController();
+        $view = $controller->showAction((int)$_REQUEST['id'], $templating, $router);
+        break;
+    case 'book-create':
+        $controller = new \App\Controller\BookController();
+        $view = $controller->createAction($_POST['book'] ?? null, $templating, $router);
+        break;
+    case 'book-edit':
+        if (! $_REQUEST['id']) break;
+        $controller = new \App\Controller\BookController();
+        $view = $controller->editAction($_REQUEST['id'], $_POST['book'] ?? null, $templating, $router);
+        break;
+    case 'book-delete':
+        if (! $_REQUEST['id']) break;
+        $controller = new \App\Controller\BookController();
+        $view = $controller->deleteAction($_REQUEST['id'], $router);
+        break;
+
+    // Inne
     case 'info':
         $controller = new \App\Controller\InfoController();
         $view = $controller->infoAction();
         break;
+
     default:
         $view = 'Not found';
         break;

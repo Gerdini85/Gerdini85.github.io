@@ -10,7 +10,7 @@ class PostController
 {
     public function indexAction(Templating $templating, Router $router): ?string
     {
-        $posts = Post::findAll();
+         $posts = Post::findAll();
         $html = $templating->render('post/index.html.php', [
             'posts' => $posts,
             'router' => $router,
