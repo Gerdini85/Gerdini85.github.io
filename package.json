@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "pnpm": "^10.34.2",
+    "prettier": "^3.8.4"
+  }
+}
