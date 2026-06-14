@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block main %}
+    <h1>Create Book</h1>
+    <form action="{{ url_for('book_create') }}" method="post" class="edit-form">
+        {% include 'book/_form.html' %}
+        <input type="hidden" name="action" value="book-create">
+    </form>
+
+    <a href="{{ url_for('book_index') }}">Back to list</a>
+{% endblock %}
